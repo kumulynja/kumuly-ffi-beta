@@ -15,5 +15,5 @@ fn main() {
         .with_config(config)
         .generate()
         .expect("Unable to generate bindings")
-        .write_to_file("libseed_ffi.h");
+        .write_to_file("libmnemonic_ffi.h");
 }

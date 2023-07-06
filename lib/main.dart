@@ -1,11 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:seed_repository/seed_repository.dart';
+import 'package:mnemonic/mnemonic.dart';
 
 void main() {
-  SeedRepository seedRepository = SeedRepository();
+  Mnemonic mnemonic =
+      Mnemonic(language: Language.english, wordCount: WordCount.words12);
   if (kDebugMode) {
-    print(seedRepository.createMnemonic(24, Language.english));
+    print(mnemonic.phrase);
+    print(mnemonic.deriveLightningSeed(Network.bitcoin));
   }
   runApp(const MyApp());
 }
@@ -119,7 +121,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
-        ),r
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,

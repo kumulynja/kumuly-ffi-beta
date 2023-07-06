@@ -1,4 +1,4 @@
-import '../seed_ffi.dart' as ffi;
+import '../mnemonic_ffi.dart' as ffi;
 
 enum Language {
   english,

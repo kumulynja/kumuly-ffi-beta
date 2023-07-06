@@ -1,5 +1,5 @@
-name: seed_repository
-description: A Dart package to generate, store and derive seeds in Bitcoin wallets.
+name: mnemonic
+description: A Dart package to generate and recover mnemonic phrases and lightning seeds for unified Bitcoin and Lightning wallets.
 version: 1.0.0
 # homepage: https://www.example.com
 
@@ -21,10 +21,10 @@ dependencies:
   path_provider: ^2.0.15
 
 ffigen:
-  name: seed_ffi
+  name: mnemonic_ffi
   description: A Dart bindings for the Rust library to generate and derive seeds.
-  output: lib/src/seed_ffi.dart
+  output: lib/src/mnemonic_ffi.dart
   headers:
     entry-points:
-      - rust/seed-ffi/libseed_ffi.h
+      - rust/libmnemonic_ffi.h
   compiler-opts: "-Wno-nullability-completeness"

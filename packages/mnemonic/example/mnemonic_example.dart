@@ -1,4 +1,4 @@
-import 'package:seed_repository/seed_repository.dart';
+import 'package:mnemonic/mnemonic.dart';
 
 void main() {
   print('English 12 Words');

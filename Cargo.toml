@@ -1,5 +1,5 @@
 [workspace]
-members = ['packages/seed_repository/rust/*']
+members = ['packages/mnemonic/rust']
 
 [profile.release]
 lto = true

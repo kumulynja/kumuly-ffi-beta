@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  seed_repository:
-    path: packages/seed_repository
+  mnemonic:
+    path: packages/mnemonic
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -5,16 +5,17 @@
 import 'dart:ffi' as ffi;
 
 /// A Dart bindings for the Rust library to generate and derive seeds.
-class seed_ffi {
+class mnemonic_ffi {
   /// Holds the symbol lookup function.
   final ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
       _lookup;
 
   /// The symbols are looked up in [dynamicLibrary].
-  seed_ffi(ffi.DynamicLibrary dynamicLibrary) : _lookup = dynamicLibrary.lookup;
+  mnemonic_ffi(ffi.DynamicLibrary dynamicLibrary)
+      : _lookup = dynamicLibrary.lookup;
 
   /// The symbols are looked up with [lookup].
-  seed_ffi.fromLookup(
+  mnemonic_ffi.fromLookup(
       ffi.Pointer<T> Function<T extends ffi.NativeType>(String symbolName)
           lookup)
       : _lookup = lookup;
